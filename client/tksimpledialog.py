@@ -25,7 +25,7 @@ class Dialog(Toplevel):
             self.title(title)
         
         # Added the ViewMyPC icon for dialog windows
-        self.wm_iconbitmap('showyourdesktop.ico')
+        if os.name == "nt": self.wm_iconbitmap("showyourdesktop.ico")
 
         self.parent = parent
 

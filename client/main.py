@@ -141,7 +141,7 @@ class App:
 
 root = Tk()
 root.title("ShowYourDesktop")
-root.wm_iconbitmap('showyourdesktop.ico')
+if os.name == "nt": root.wm_iconbitmap("showyourdesktop.ico")
 app = App(root)
 root.mainloop()
 
