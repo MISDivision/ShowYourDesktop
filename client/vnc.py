@@ -21,6 +21,11 @@ if os.name == 'nt':
     startupinfo = STARTUPINFO()
     startupinfo.dwFlags |= STARTF_USESHOWWINDOW
 
+architecture = platform.machine()
+print architecture
+if architecture == "i686":
+	architecture = "i386"
+
 ## View Remote Desktop
 def client_tunnel(host=server.sshhost, port="5900", user=server.sshuser, sshport=server.sshport, password=server.sshpass):
 
